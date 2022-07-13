@@ -12,7 +12,7 @@ namespace KateTechPractice
         {
             t.Series[NumOfSeries].Points.Clear();
             t.Series[NumOfSeries].ChartType = SeriesChartType.Spline;
-            t.Series[NumOfSeries].BorderWidth = BasicBorderWidth;                        
+            t.Series[NumOfSeries].BorderWidth = BasicBorderWidth;
 
             for (int i = 0; i < X.Length; i++)
             {
@@ -29,7 +29,7 @@ namespace KateTechPractice
             t.ChartAreas[0].AxisY.Minimum = minY;
             t.ChartAreas[0].AxisY.Maximum = maxY;
         }
-        public void SetTitle(Chart t,string NameTitleX, string NameTitleY)
+        public void SetTitle(Chart t, string NameTitleX, string NameTitleY)
         {
             t.ChartAreas[0].AxisX.TitleFont = new Font(BasicFont, BasicFontSize, FontStyle.Regular);
             t.ChartAreas[0].AxisY.TitleFont = new Font(BasicFont, BasicFontSize, FontStyle.Regular);

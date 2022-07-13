@@ -4,12 +4,12 @@ namespace KateTechPractice
 {
     public partial class Task2v2FormDependenceOfMaxError : Form
     {
-        
+
         public Task2v2FormDependenceOfMaxError()
         {
             InitializeComponent();
             this.Text = "Task 2.2. Зависимость макс. погрешности от числа узлов интерполирования";
-            FillDGVnChart();            
+            FillDGVnChart();
         }
         public void FillDGVnChart()
         {

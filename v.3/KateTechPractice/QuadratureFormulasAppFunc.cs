@@ -2,7 +2,7 @@
 
 namespace KateTechPractice
 {
-    class QuadratureFormulasAppFunc:ApproximateFunction
+    class QuadratureFormulasAppFunc : ApproximateFunction
     {
         private int N { get; set; } //количество частей для разбиения отрезка интегрирования
         public double[] valuesOfFormulas { get; set; }
@@ -25,23 +25,23 @@ namespace KateTechPractice
             switch (formula)
             {
                 case Formula.LeftRect:
-                    CalculateIntegral(LeftRectanglesFormula);                    
+                    CalculateIntegral(LeftRectanglesFormula);
                     break;
                 case Formula.CenterRect:
-                    CalculateIntegral(CentralRectanglesFormula);                    
+                    CalculateIntegral(CentralRectanglesFormula);
                     break;
                 case Formula.Trapez:
-                    CalculateIntegral(TrapezFormula);                   
+                    CalculateIntegral(TrapezFormula);
                     break;
                 case Formula.Simpson:
-                    CalculateIntegral(SimpsonFormula);                    
+                    CalculateIntegral(SimpsonFormula);
                     break;
                 case Formula.Gauss:
-                    CalculateIntegral(GaussFormula);                    
+                    CalculateIntegral(GaussFormula);
                     break;
             }
         }
-        public void CalculateIntegral(Func<double,double> func)
+        public void CalculateIntegral(Func<double, double> func)
         {
             valuesOfFormulas = new double[x.Length];
             error = new double[x.Length];
@@ -56,23 +56,23 @@ namespace KateTechPractice
                 double err = Math.Abs(s - ss);
                 while (err >= eps && N <= 524288)
                 {
-                    s = ss;                    
+                    s = ss;
                     N += 65536;
                     ss = func(x[i]);
                     err = Math.Abs(s - ss);
                 }
                 valuesOfFormulas[i] = Math.Round(s, 8);
                 this.error[i] = Math.Round(err, 10);
-                if(s!=0)
-                numberOfParts[i] = N- 65536;
-            }            
+                if (s != 0)
+                    numberOfParts[i] = N - 65536;
+            }
         }
 
         private double IntegrandFunction(double x, double z) //подыинтегральная функция
         {
 
             return (Math.Cos(Math.PI * z * z / 2));
-        }        
+        }
         public double[] arrZ()//разбиение отрезка на N частей
         {
             double[] arrayZ = new double[N + 1];
@@ -88,7 +88,7 @@ namespace KateTechPractice
             double resultSum = 0;
             for (int i = 1; i < N; i++)
             {
-                resultSum += IntegrandFunction(x, arrayZ[i - 1] + ((b - a) / N) / 2 * (1 - 1 / Math.Sqrt(3))) + 
+                resultSum += IntegrandFunction(x, arrayZ[i - 1] + ((b - a) / N) / 2 * (1 - 1 / Math.Sqrt(3))) +
                     IntegrandFunction(x, arrayZ[i - 1] + ((b - a) / N) / 2 * (1 + 1 / Math.Sqrt(3)));
             }
             return ((b - a) / N) / 2 * resultSum;

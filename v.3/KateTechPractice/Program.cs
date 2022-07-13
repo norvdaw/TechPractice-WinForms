@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KateTechPractice
 {
-   
+
     static class Program
     {
 
@@ -21,6 +18,6 @@ namespace KateTechPractice
             Application.Run(new Task1FormTaylor());
 
         }
-        
+
     }
 }

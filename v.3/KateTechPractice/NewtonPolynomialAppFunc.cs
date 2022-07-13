@@ -2,7 +2,7 @@
 
 namespace KateTechPractice
 {
-    class NewtonPolynomialAppFunc:ApproximateFunction
+    class NewtonPolynomialAppFunc : ApproximateFunction
     {
         public NewtonPolynomialAppFunc(double a, double b, double step, double eps)
         {
@@ -19,7 +19,7 @@ namespace KateTechPractice
         public double[] maxError { get; set; }
         public int numberOfNodes { get; set; } = 5;
         public double CalculateNewtonPolinomial(Func<double[]> funс, double x, int kolvoUzlov) //интерполяционный полином Ньютона
-        {            
+        {
             double[] xSupport = funс();
             double[] fSupport = new double[kolvoUzlov];
             CalculateTaylorSeries(xSupport, fSupport);
@@ -47,31 +47,31 @@ namespace KateTechPractice
             double error;
             for (int i = 0; i < x.Length; i++)
             {
-                polynomial[i] = Math.Round(CalculateNewtonPolinomial(func,x[i], numberOfNodes), 8);
+                polynomial[i] = Math.Round(CalculateNewtonPolinomial(func, x[i], numberOfNodes), 8);
                 error = Math.Round(Math.Abs(f[i] - polynomial[i]), 8);
                 if (errorSupport < error)
                     errorSupport = error;
             }
             return errorSupport;
         }
-        public void CalculateMaxError(Func<double[]> func) 
+        public void CalculateMaxError(Func<double[]> func)
         {
             numberOfNodesMaxError = new double[f.Length];
             maxError = new double[f.Length];
             numberOfNodes = 0;
-            for(int i = 0; i < f.Length; i++)
+            for (int i = 0; i < f.Length; i++)
             {
                 numberOfNodes += 3;
-                numberOfNodesMaxError[i] =numberOfNodes;
-                maxError[i] = MaxError(func);              
+                numberOfNodesMaxError[i] = numberOfNodes;
+                maxError[i] = MaxError(func);
             }
         }
         public void CalculatePolynomial(Func<double[]> func)
         {
             polinomial = new double[x.Length];
-            for(int i = 0; i < polinomial.Length; i++)
+            for (int i = 0; i < polinomial.Length; i++)
             {
-                polinomial[i] = Math.Round(CalculateNewtonPolinomial(func, x[i], numberOfNodes),8);
+                polinomial[i] = Math.Round(CalculateNewtonPolinomial(func, x[i], numberOfNodes), 8);
             }
         }
 
@@ -88,17 +88,17 @@ namespace KateTechPractice
             double result;
             double[] arrRoots = new double[(int)numberOfNodes];
             double stepChebyshev = Math.Round((b - a) / arrRoots.Length, 3);
-            arrRoots[0] = a + stepChebyshev / 2;            
+            arrRoots[0] = a + stepChebyshev / 2;
             for (int i = 0; i < numberOfNodes; i++)
             {
-                result = ((b - a) / 2) * Math.Cos(((2 * i + 1) * Math.PI) / 
+                result = ((b - a) / 2) * Math.Cos(((2 * i + 1) * Math.PI) /
                     (2 * ((double)numberOfNodes + 1))) + ((a + b) / 2);
                 arrRoots[i] = result;
             }
             return arrRoots;
         }
         public double[] setNormalNodes() //Расчет узлов для равномерно распределенных узлов
-        {            
+        {
             double[] arrNodes = new double[numberOfNodes];
             double stepNormal = Math.Round((b - a) / numberOfNodes, 3);
             arrNodes[0] = a + stepNormal / 2;

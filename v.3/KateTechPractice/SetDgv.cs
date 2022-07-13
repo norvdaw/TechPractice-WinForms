@@ -3,7 +3,7 @@
 namespace KateTechPractice
 {
     class SetDgv
-    {        
+    {
         public void Fill(DataGridView t, string[] ColumnName, int Length, params double[][] arr)
         {
             t.Rows.Clear();

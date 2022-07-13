@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace KateTechPractice
 {
@@ -34,7 +31,7 @@ namespace KateTechPractice
                 count[i] = 0;
                 while (Math.Abs(an) > eps)
                 {
-                    an = (Math.Pow(-1, count[i]) * (Math.Pow(Math.PI / 2, 2 * count[i])) * 
+                    an = (Math.Pow(-1, count[i]) * (Math.Pow(Math.PI / 2, 2 * count[i])) *
                         Math.Pow(x[i], 4 * count[i] + 1)) / ((Factorial(2 * count[i]) * (4 * count[i] + 1)));
                     res += an;
                     count[i]++;
@@ -44,7 +41,7 @@ namespace KateTechPractice
             }
         }
         public void CalculateTaylorSeries(double[] x, double[] f)
-        {                     
+        {
             double an, res = 0;
             int t;
             for (int i = 0; i < f.Length; i++)
@@ -53,7 +50,7 @@ namespace KateTechPractice
                 an = 1;
                 while (Math.Abs(an) > eps)
                 {
-                    an = (Math.Pow(-1, t) * Math.Pow(Math.PI / 2, 2 * t)) * 
+                    an = (Math.Pow(-1, t) * Math.Pow(Math.PI / 2, 2 * t)) *
                         Math.Pow(x[i], 4 * t + 1) / ((Factorial(2 * t) * (4 * t + 1)));
                     res += an;
                     t++;
@@ -62,7 +59,7 @@ namespace KateTechPractice
                 res = 0;
             }
         }
-        protected void FillArrayX(double[]x)
+        protected void FillArrayX(double[] x)
         {
             x[0] = a;
             for (int i = 1; i < x.Length; i++)
