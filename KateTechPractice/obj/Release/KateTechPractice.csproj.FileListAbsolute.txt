@@ -1,0 +1,13 @@
+C:\Users\Norvdaw\Documents\GitHub\TechPracticeWinForms\v.3\KateTechPractice\bin\Release\KateTechPractice.exe.config
+C:\Users\Norvdaw\Documents\GitHub\TechPracticeWinForms\v.3\KateTechPractice\bin\Release\KateTechPractice.exe
+C:\Users\Norvdaw\Documents\GitHub\TechPracticeWinForms\v.3\KateTechPractice\bin\Release\KateTechPractice.pdb
+C:\Users\Norvdaw\Documents\GitHub\TechPracticeWinForms\v.3\KateTechPractice\obj\Release\KateTechPractice.csprojAssemblyReference.cache
+C:\Users\Norvdaw\Documents\GitHub\TechPracticeWinForms\v.3\KateTechPractice\obj\Release\KateTechPractice.Task1FormTaylor.resources
+C:\Users\Norvdaw\Documents\GitHub\TechPracticeWinForms\v.3\KateTechPractice\obj\Release\KateTechPractice.Task2v1FormNewton.resources
+C:\Users\Norvdaw\Documents\GitHub\TechPracticeWinForms\v.3\KateTechPractice\obj\Release\KateTechPractice.Task2v2FormDependenceOfMaxError.resources
+C:\Users\Norvdaw\Documents\GitHub\TechPracticeWinForms\v.3\KateTechPractice\obj\Release\KateTechPractice.Task3FormQuadratureFormulas.resources
+C:\Users\Norvdaw\Documents\GitHub\TechPracticeWinForms\v.3\KateTechPractice\obj\Release\KateTechPractice.Properties.Resources.resources
+C:\Users\Norvdaw\Documents\GitHub\TechPracticeWinForms\v.3\KateTechPractice\obj\Release\KateTechPractice.csproj.GenerateResource.cache
+C:\Users\Norvdaw\Documents\GitHub\TechPracticeWinForms\v.3\KateTechPractice\obj\Release\KateTechPractice.csproj.CoreCompileInputs.cache
+C:\Users\Norvdaw\Documents\GitHub\TechPracticeWinForms\v.3\KateTechPractice\obj\Release\KateTechPractice.exe
+C:\Users\Norvdaw\Documents\GitHub\TechPracticeWinForms\v.3\KateTechPractice\obj\Release\KateTechPractice.pdb
