@@ -1,4 +1,4 @@
-# TechPracticeWinForms
+<h1 align="center">TechPracticeWinForms</h1>
 
 Одна из специальных функций математической физики имеет следующий
 вид:
